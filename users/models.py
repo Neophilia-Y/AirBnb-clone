@@ -30,6 +30,6 @@ class User(AbstractUser):
     gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
     bio = models.TextField(default="", blank=True)
     language = models.CharField(choices=LANGUAGE_CHOICES, max_length=2, blank=True)
-    birthdate = models.DateField()
+    birthdate = models.DateField(null=True)
     currency = models.CharField(max_length=3, choices=CURRENCY_CHOICES, blank=True)
     superhost = models.BooleanField(default=False)
