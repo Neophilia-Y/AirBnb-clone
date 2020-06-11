@@ -20,6 +20,7 @@ class CustomUserAdmin(UserAdmin):
                     "bio",
                     "language",
                     "currency",
+                    "superhost",
                 )
             },
         ),

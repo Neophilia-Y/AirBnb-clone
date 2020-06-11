@@ -1,0 +1,20 @@
+{% extends "base.html"  %}
+{% block page_title %}
+    Search
+{% endblock page_title %}
+
+{% block search-bar %}
+    <form method="get" action="{% url "rooms:search" %}">
+        {{form.as_p}}
+        <button>Submit</button>
+    </form>
+
+    <h3>Result</h3>
+    {% for room in rooms %}
+        <h3>{{room.name}}</h3>
+    {% endfor %}
+{% endblock search-bar %}
+
+{% block content %}
+    Searching by {{city}}
+{% endblock content %}
